@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en.us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <title>Week 4</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Week 4 Add 2 Numbers</h1>
+        <h2>Laura Espinal</h2>
+    </header>
+    <main>
+        <label>Enter Number 1: <input type="text" id="number1"></label>
+        <label>Enter Number 2: <input type="text" id="number2"></label>
+        
+        <label><button onclick="addNumbers()">Add Numbers</button></label>
+        <hr />
+        <p><span id="output"></span></p>
+
+    </main>
+    <footer>
+        &copy;2021 &bull; Laura Espinal &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+
+    <script>
+
+          function addNumbers() {		
+          // INPUT Get two numbers from two different input boxes - x and y
+          let x = parseFloat.getElementById('number1').value;
+          let y = parseFloat.getElementById('number2').value;
+
+          //PROCESSING Add the two numbers together store in sum
+          let sum = x + y ;
+
+          //OUTPUT Display sum on the document
+          document.getElementById('output').innerHTML = "The sum of " + x + " and " + y + " equals " + sum + "!";
+          }
+        
+
+    </script>
+</body>
+
+</html>
