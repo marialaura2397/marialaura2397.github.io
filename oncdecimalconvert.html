@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en.us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <title>Temple for CI 160 course</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Convert a Real Number to a 1 Decimal points</h1>
+        <h2>Laura Espinal</h2>
+    </header>
+    <main>
+        <h3>Enter a real number with 5 decimal points</h3>
+        <label>number: <input type="text" id="Input1"></label>
+        <button onclick="twodec()">Show One Decimal</button></label>
+        <hr>
+        <p id="output"></p>
+    </main>
+    <footer>
+        &copy;2021 &bull; Laura Espinal &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+
+    <script>
+        function onedec() { 		
+          // INPUT get a new number from the x textbox and assign it to the variable number
+          let num = parseFloat(document.getElementById('x').value);
+          //PROCESSING convert using the built in toFixed method
+          let result = num.toFixed(1)
+          //OUTPUT display resulto to the output paragraph
+          document.getElementById('output').innerHTML = result;
+        }
+
+    </script>
+</body>
+
+</html>

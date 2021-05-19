@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en.us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <title>Week 5</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Week 5</h1>
+        <h2>Laura Espinal</h2>
+    </header>
+    <main>
+        <h3>Convert Pounds to Kilograms</h3>
+        <label>Enter Pounds <input type="number" id="pounds1"></label>
+
+        <label><button onclick="weightConverter()">LbsToKg</button></label>
+        <hr>
+        <p id="output"></p>
+    </main>
+    <footer>
+        &copy;2021 &bull; Laura Espinal &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+
+    <script>
+        /* Input: Pounds we need in kilograms 
+          * Processing: convert the weight from pounds to kilograms
+          * Output: the mass converted kilograms
+         */
+
+        function weightConverter() {
+            // Read Pounds from the user.
+            let text = document.getElementById('pounds1').value;
+
+            // Convert what the user typed from text into a number.
+            let lbs = parseFloat(text);
+
+            // Convert the Pounds mass into Kilograms.
+            let kg = lbs / 2.2046;
+
+            // Display the Pounds weight to the user.
+
+            document.getElementById("output").innerHTML = kg.toFixed(1);
+        }
+
+    </script>
+</body>
+
+</html>
