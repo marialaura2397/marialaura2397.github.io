@@ -11,14 +11,16 @@
 
 <body>
     <header>
-        <h1>Week 4 Add 2 Numbers</h1>
+        <h1>Exam part 2</h1>
         <h2>Laura Espinal</h2>
     </header>
     <main>
-        <label>Enter Number 1: <input type="text" id="number1"></label>
-        <label>Enter Number 2: <input type="text" id="number2"></label>
+        <label>Enter Regular Pay: <input type="text" id="number1"></label>
+        <label>Enter Overtime Pay: <input type="text" id="number2"></label>
+        <label>Enter Tax Amount: <input type="text" id="number3"></label>
 
-        <label><button onclick="addNumbers()">Add Numbers</button></label>
+
+        <label><button onclick="addNumbers()">Result</button></label>
         <hr />
         <p><span id="output"></span></p>
 
@@ -33,9 +35,11 @@
             // INPUT Get two numbers from two different input boxes - x and y
             let x = parseFloat(document.getElementById('number1').value);
             let y = parseFloat(document.getElementById('number2').value);
+            let m = parseFloat(document.getElementById('number3').value);
+
 
             //PROCESSING Add the two numbers together store in sum
-            let sum = x + y;
+            let sum = x + y - m;
 
             //OUTPUT Display sum on the document
             document.getElementById('output').innerHTML = "The sum of " + x + " and " + y + " equals " + sum + "!";

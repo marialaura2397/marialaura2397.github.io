@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en.us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <title>Temple for CI 160 course</title>
+    
+</head>
+
+<body>
+    <header>
+        <h1>Exam part 2</h1>
+        <h2>Laura Espinal</h2>
+    </header>
+    <main>
+        <h3>Volume of a Cylinder</h3>
+        <label>radius <input type="text" id="radiusInput"></label>
+        <label>height <input type="text" id="heightInput"></label>
+        <label><button onclick="volume()">Result</button></label>
+        <hr>
+        <p id="outputDiv"></p>
+    </main>
+    <footer>
+        &copy;2021 &bull; Laura Espinal &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+
+    <script>
+
+        /* Input: radius and height of a cylinder
+         * Processing: Calculate the volume of the cylinder.
+         * Output: the volume
+         */
+        function volume() {
+            // Get the radius and height from the user.
+            let r = parseFloat(document.getElementById('radiusInput').value);
+            let h = parseFloat(document.getElementById('heightInput').value);
+
+            // Compute the volume of the cylinder.
+            let v = Math.PI * r * r * h;
+
+            // Display the volume to the user.
+            document.getElementById('outputDiv').innerHTML = v.toFixed(0);
+        }
+
+    </script>
+</body>
+
+</html>
