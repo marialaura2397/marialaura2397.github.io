@@ -15,12 +15,11 @@
         <h2>Laura Espinal</h2>
     </header>
     <main>
-            <label>Enter the Sales Total: <input type="text" id="salestotal"></label>
-            <label><button onclick="Discount"()>Discount</button></label>
-            <label>10% Discount
+        <label>Enter the Sales Total: <input type="text" id="salestotal"></label>
+        <label><button onclick="Discount()">Discount</button></label>
 
-            <hr />
-            <p><span id="output"></span></p>
+        <hr />
+        <p><span id="output"></span></p>
 
     </main>
     <footer>
@@ -29,27 +28,28 @@
 
     <script>
 
-        function logic() {
+        function Discount() {
             //SETUP
-            let mesage = '0%'; // default discount
             let dayOfWeek = new Date().getDay();
 
 
             // INPUT total sales amount to calculate discount
             let total = parseFloat(document.getElementById('salestotal').value);
-            
+
 
 
             //PROCESSING Calculate the discount from the total and depnding on the day 
             // if it is Tuesday or Wenesday then discount
 
-            if (total > 50 && d.getDay() != 2 && d.getDay() !=3 ) {
-                message = '10%'; 
+            if (total > 50 && (dayOfWeek == 2 || dayOfWeek == 3)) {
+                total = total * .9;
+
             }
 
+            total = total * 1.06;
 
-                //OUTPUT  
-                document.getElementById('output').innerHTML = message;
+            //OUTPUT  
+            document.getElementById('output').innerHTML = '$' + total.toFixed(2);
         }
 
     </script>

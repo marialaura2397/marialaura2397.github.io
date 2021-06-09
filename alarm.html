@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en.us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <title>Alarm</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Week 7</h1>
+        <h2>Laura Espinal</h2>
+    </header>
+    <main>
+        <label><button onclick="checkStatus()">Discount</button></label>
+
+        <hr />
+        <p><span id="output"></span></p>
+
+    </main>
+    <footer>
+        &copy;2021 &bull; Laura Espinal &bull; BYU-Idaho &bull; CIT 160
+    </footer>
+
+    <script>
+        // output either "Sleep In" or  "Get Up!"
+        function checkStatus() {
+            //SETUP - this is our Input
+            let d = new Date();
+            let dayOfWeek = d.getDay();  // 3 = Wednesday
+            let date = d.getDate();  // 9
+            let month = d.getMonth(); // 5 = June
+
+            let message = "Get Up!";
+
+            //PROCESSING ¨change the message to sleep in if it is sat OR sun or one of the three holidays.
+
+            if () {
+                message = "Sleep In";
+
+            }
+
+            //OUTPUT  
+            document.getElementById('output').innerHTML = message;
+        }
+
+    </script>
+</body>
+
+</html>
